@@ -1,27 +1,29 @@
-import "./globals.css";
 import type { Metadata } from "next";
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
-  title: "Hope for the Vulnerable Foundation",
+  title: {
+    default: "Hope for the Vulnerable Foundation (HOVULF)",
+    template: "%s | HOVULF",
+  },
   description:
-    "Restoring hope and protecting dignity for vulnerable girls, women, children, and the elderly in Cameroon.",
+    "Hope for the Vulnerable Foundation (HOVULF) empowers girls, women, children, and the elderly in Cameroon through health, education, livelihoods, and protection programs.",
+  keywords: [
+    "NGO Cameroon",
+    "Girls empowerment",
+    "Women empowerment",
+    "UNICEF partner NGO",
+    "Poultry farming projects",
+    "Gender-based violence prevention",
+    "Community health Cameroon",
+  ],
+  authors: [{ name: "Hope for the Vulnerable Foundation" }],
+  metadataBase: new URL("https://hovulf.vercel.app"), // update after custom domain
+  openGraph: {
+    title: "Hope for the Vulnerable Foundation",
+    description:
+      "Restoring hope and protecting dignity for vulnerable communities in Cameroon.",
+    type: "website",
+    locale: "en_US",
+  },
 };
-
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
-  return (
-    <html lang="en">
-      <body className="min-h-screen flex flex-col">
-        <Header />
-        <main className="flex-1">{children}</main>
-        <Footer />
-      </body>
-    </html>
-  );
-}
 
