@@ -2,6 +2,17 @@ import Image from "next/image";
 import Link from "next/link";
 import { projects } from "@/content/projects";
 
+const projectImages = [
+  {
+    src: "https://images.unsplash.com/photo-1516466723877-e4ec1d736c8a?auto=format&fit=crop&w=1200&q=80",
+    alt: "Poultry farming project in action",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=1200&q=80",
+    alt: "Community program support session",
+  },
+];
+
 export default function ProjectsPage() {
   return (
     <section className="py-16">
@@ -40,12 +51,13 @@ export default function ProjectsPage() {
                 {project.partner && ` • 🤝 ${project.partner}`}
               </p>
 
-              <Link
-                href={`/projects/${project.slug}`}
-                className="text-primary font-medium hover:underline"
-              >
-                View project →
-              </Link>
+                <Link
+                  href={`/projects/${project.slug}`}
+                  className="text-primary font-medium hover:underline"
+                >
+                  View project →
+                </Link>
+              </div>
             </div>
           ))}
         </div>

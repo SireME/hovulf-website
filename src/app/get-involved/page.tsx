@@ -1,6 +1,39 @@
 import Image from "next/image";
 import Link from "next/link";
 
+const opportunities = [
+  {
+    title: "Volunteer",
+    description:
+      "Join our team in community outreach, training, research, and advocacy activities.",
+    link: "/contact",
+    linkLabel: "Sign up →",
+    image:
+      "https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&w=1200&q=80",
+    alt: "Volunteers supporting community outreach",
+  },
+  {
+    title: "Partner With Us",
+    description:
+      "We collaborate with NGOs, donors, institutions, and private sector partners.",
+    link: "/contact",
+    linkLabel: "Become a partner →",
+    image:
+      "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=80",
+    alt: "Partners meeting with NGO team",
+  },
+  {
+    title: "Sponsor a Project",
+    description:
+      "Support a specific project and directly impact vulnerable communities.",
+    link: "/projects",
+    linkLabel: "View projects →",
+    image:
+      "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=1200&q=80",
+    alt: "Community project collaboration",
+  },
+];
+
 export default function GetInvolvedPage() {
   return (
     <section className="py-16">
