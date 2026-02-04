@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import ProgramsCarousel from "@/components/home/ProgramsCarousel";
 
@@ -32,7 +33,16 @@ export default function ProgramsPreview() {
         </div>
 
         <div className="mb-12">
-          <ProgramsCarousel />
+          <div className="relative mx-auto max-w-4xl overflow-hidden rounded-3xl shadow-xl">
+            <Image
+              src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1400&q=80"
+              alt="Women collaborating in a community workshop"
+              width={800}
+              height={500}
+              className="animate-float h-full w-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/30 via-transparent to-sky-500/30" />
+          </div>
         </div>
 
         <div className="grid gap-8 md:grid-cols-3">
