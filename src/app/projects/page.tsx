@@ -1,32 +1,41 @@
+import Image from "next/image";
 import Link from "next/link";
 import { projects } from "@/content/projects";
 
 export default function ProjectsPage() {
   return (
     <section className="py-16">
-      <div className="container mx-auto px-6 max-w-6xl">
-        <h1 className="text-4xl font-bold mb-6">Our Projects</h1>
+      <div className="container mx-auto max-w-6xl px-6">
+        <h1 className="mb-6 text-4xl font-bold">Our Projects</h1>
 
-        <p className="text-gray-600 mb-10">
+        <div className="mb-10 overflow-hidden rounded-3xl shadow-xl">
+          <Image
+            src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1400&q=80"
+            alt="Community development project in action"
+            width={1200}
+            height={600}
+            className="h-64 w-full object-cover"
+          />
+        </div>
+
+        <p className="mb-10 text-gray-600">
           Our projects focus on empowering vulnerable girls, women, children,
           and communities through sustainable, community-driven interventions.
         </p>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid gap-8 md:grid-cols-2">
           {projects.map((project) => (
             <div
               key={project.slug}
-              className="border rounded-lg p-6 hover:shadow-md transition"
+              className="rounded-lg border p-6 transition hover:shadow-md"
             >
-              <h2 className="text-2xl font-semibold mb-2">
+              <h2 className="mb-2 text-2xl font-semibold">
                 {project.title}
               </h2>
 
-              <p className="text-gray-600 mb-4">
-                {project.summary}
-              </p>
+              <p className="mb-4 text-gray-600">{project.summary}</p>
 
-              <p className="text-sm text-gray-500 mb-4">
+              <p className="mb-4 text-sm text-gray-500">
                 📍 {project.location} • 📅 {project.year}
                 {project.partner && ` • 🤝 ${project.partner}`}
               </p>
@@ -44,4 +53,3 @@ export default function ProjectsPage() {
     </section>
   );
 }
-
