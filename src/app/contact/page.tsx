@@ -5,20 +5,16 @@ export default function ContactPage() {
   return (
     <section className="py-16">
       <div className="container mx-auto max-w-4xl px-6">
-        <div className="relative mb-10 overflow-hidden rounded-3xl shadow-xl">
+        <h1 className="mb-6 text-4xl font-bold">Contact Us</h1>
+
+        <div className="mb-10 overflow-hidden rounded-3xl shadow-xl">
           <Image
-            src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1600&q=80"
+            src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1400&q=80"
             alt="Team meeting with partners"
             width={1200}
             height={600}
             className="h-64 w-full object-cover"
           />
-          <div className="absolute inset-0 bg-black/30" />
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="rounded-full bg-white/70 px-6 py-2 text-center text-3xl font-bold text-gray-900 backdrop-blur">
-              Contact Us
-            </div>
-          </div>
         </div>
 
         <p className="mb-10 text-lg text-gray-700">
