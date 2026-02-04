@@ -16,26 +16,22 @@ export default function ProjectPage({ params }: ProjectPageProps) {
   return (
     <section className="py-16">
       <div className="container mx-auto max-w-5xl px-6">
-        <div className="relative mb-8 overflow-hidden rounded-3xl shadow-xl">
-          <Image
-            src="https://images.unsplash.com/photo-1516466723877-e4ec1d736c8a?auto=format&fit=crop&w=1600&q=80"
-            alt="Poultry farming project in action"
-            width={1200}
-            height={600}
-            className="h-64 w-full object-cover"
-          />
-          <div className="absolute inset-0 bg-black/30" />
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="max-w-xl rounded-2xl bg-white/70 px-6 py-3 text-center text-2xl font-bold text-gray-900 backdrop-blur">
-              {project.title}
-            </div>
-          </div>
-        </div>
+        <h1 className="mb-4 text-4xl font-bold">{project.title}</h1>
 
         <p className="mb-6 text-sm text-gray-500">
           📍 {project.location} • 📅 {project.year}
           {project.partner && ` • 🤝 ${project.partner}`}
         </p>
+
+        <div className="mb-10 overflow-hidden rounded-3xl shadow-xl">
+          <Image
+            src="https://images.unsplash.com/photo-1516466723877-e4ec1d736c8a?auto=format&fit=crop&w=1400&q=80"
+            alt="Poultry farming project in action"
+            width={1200}
+            height={600}
+            className="h-64 w-full object-cover"
+          />
+        </div>
 
         <p className="mb-10 text-lg text-gray-700">{project.description}</p>
 
