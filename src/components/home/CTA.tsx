@@ -36,8 +36,8 @@ export default function CTA() {
         <div className="relative">
           <div className="relative overflow-hidden rounded-3xl shadow-2xl">
             <Image
-              src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&w=900&q=80"
-              alt="Volunteers celebrating together"
+              src="/assets/images/image7.jpeg"
+              alt="Sanitary pad outreach with community members"
               width={760}
               height={420}
               className="animate-float h-full w-full object-cover"

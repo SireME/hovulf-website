@@ -1,5 +1,7 @@
+import Image from "next/image";
 import Link from "next/link";
 import ProgramsCarousel from "@/components/home/ProgramsCarousel";
+import { programSections } from "@/content/siteAssets";
 
 const programs = [
   {
@@ -18,6 +20,8 @@ const programs = [
       "Prevention of gender-based violence and safe spaces for girls and women.",
   },
 ];
+
+const programItems = programSections.flatMap((section) => section.items);
 
 export default function ProgramsPreview() {
   return (
@@ -59,6 +63,26 @@ export default function ProgramsPreview() {
               </Link>
             </div>
           ))}
+        </div>
+
+        <div className="mt-14">
+          <h3 className="mb-5 text-2xl font-bold text-gray-900">Program Moments</h3>
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {programItems.map((item) => (
+              <figure
+                key={item.image}
+                className="overflow-hidden rounded-2xl bg-white shadow-sm"
+              >
+                <div className="relative h-44">
+                  <Image src={item.image} alt={item.title} fill className="object-cover" />
+                </div>
+                <figcaption className="p-4">
+                  <p className="font-semibold text-gray-900">{item.title}</p>
+                  <p className="mt-1 text-sm text-gray-600">{item.description}</p>
+                </figcaption>
+              </figure>
+            ))}
+          </div>
         </div>
       </div>
     </section>

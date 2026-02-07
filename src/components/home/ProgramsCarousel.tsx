@@ -5,18 +5,18 @@ import { useEffect, useState } from "react";
 
 const slides = [
   {
-    src: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1600&q=80",
-    alt: "African women in NGO uniforms collaborating",
+    src: "/assets/images/image9.jpeg",
+    alt: "HIV sensitization session",
     label: "Health outreach teams",
   },
   {
-    src: "https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&w=1600&q=80",
-    alt: "Community volunteers wearing organization apparel",
+    src: "/assets/images/image6.jpeg",
+    alt: "Sanitary pad distribution outreach",
     label: "Community protection programs",
   },
   {
-    src: "https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?auto=format&fit=crop&w=1600&q=80",
-    alt: "Women in training with NGO partners",
+    src: "/assets/images/image3.jpeg",
+    alt: "Dry fish training group activity",
     label: "Livelihoods & skills training",
   },
 ];

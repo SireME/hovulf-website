@@ -11,7 +11,7 @@ export default function FeaturedProject() {
           </div>
           <div className="relative overflow-hidden rounded-3xl shadow-xl">
             <Image
-              src="https://images.unsplash.com/photo-1516466723877-e4ec1d736c8a?auto=format&fit=crop&w=1200&q=80"
+              src="/assets/images/image11.jpeg"
               alt="Poultry farming project participants"
               width={840}
               height={520}

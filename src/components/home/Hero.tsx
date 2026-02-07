@@ -53,8 +53,8 @@ export default function Hero() {
           </div>
           <div className="relative overflow-hidden rounded-3xl shadow-2xl">
             <Image
-              src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&w=1200&q=80"
-              alt="Community members celebrating together"
+              src="/assets/images/image2.jpeg"
+              alt="Tailoring skills training session"
               width={900}
               height={760}
               className="animate-float h-full w-full object-cover"
