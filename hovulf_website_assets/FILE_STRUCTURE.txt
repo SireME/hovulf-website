@@ -1,0 +1,4 @@
+hovulf_extracted/
+├── images/               # Extracted images from the Word document
+├── image_text_map.json   # Mapping of images to website text/meaning
+└── FILE_STRUCTURE.txt    # Description of this structure

@@ -1,0 +1,135 @@
+{
+  "assets": [
+    {
+      "section": "branding",
+      "items": [
+        {
+          "image": "images/image1.png",
+          "title": "HOVULF Logo",
+          "description": "Official identity representing Hope for the Vulnerable Foundation."
+        }
+      ]
+    },
+    {
+      "section": "livelihood_empowerment",
+      "items": [
+        {
+          "image": "images/image2.jpeg",
+          "title": "Tailoring Skills Training",
+          "description": "Young mothers learning tailoring to generate income and improve self-reliance."
+        },
+        {
+          "image": "images/image3.jpeg",
+          "title": "Dry Fish Training",
+          "description": "AGYW learning fish drying and marketing techniques."
+        },
+        {
+          "image": "images/image4.jpeg",
+          "title": "Dry Fish Training Activity",
+          "description": "Hands-on participation during income-generation training sessions."
+        }
+      ]
+    },
+    {
+      "section": "child_protection",
+      "items": [
+        {
+          "image": "images/image5.png",
+          "title": "Orphanage Visit",
+          "description": "Community outreach supporting vulnerable children."
+        }
+      ]
+    },
+    {
+      "section": "menstrual_health",
+      "items": [
+        {
+          "image": "images/image6.jpeg",
+          "title": "Sanitary Pad Distribution",
+          "description": "Provision of menstrual hygiene support to adolescent girls."
+        },
+        {
+          "image": "images/image7.jpeg",
+          "title": "Sanitary Pad Outreach",
+          "description": "Engagement during health distribution programs."
+        }
+      ]
+    },
+    {
+      "section": "case_identification",
+      "items": [
+        {
+          "image": "images/image8.jpeg",
+          "title": "Identification of Adolescent Mothers",
+          "description": "Field assessment to support vulnerable young mothers."
+        }
+      ]
+    },
+    {
+      "section": "health_sensitization",
+      "items": [
+        {
+          "image": "images/image9.jpeg",
+          "title": "HIV Sensitization",
+          "description": "Community education on HIV prevention and SRHR."
+        },
+        {
+          "image": "images/image10.jpeg",
+          "title": "SRHR Awareness Session",
+          "description": "Peer engagement and education among AGYW groups."
+        }
+      ]
+    },
+    {
+      "section": "agriculture_livelihood",
+      "items": [
+        {
+          "image": "images/image11.jpeg",
+          "title": "Poultry Farming Program",
+          "description": "Income-generating agricultural initiative involving AGYW participants."
+        }
+      ]
+    },
+    {
+      "section": "administration",
+      "items": [
+        {
+          "image": "images/image12.png",
+          "title": "Yelluma Perpetua",
+          "description": "Founder and President guiding organizational vision."
+        },
+        {
+          "image": "images/image13.jpeg",
+          "title": "Etoh Anzah Kingsley",
+          "description": "Coordinator managing program implementation."
+        },
+        {
+          "image": "images/image14.jpeg",
+          "title": "Ivette Mambo Tayoh",
+          "description": "Secretary General supporting administration."
+        },
+        {
+          "image": "images/image15.jpeg",
+          "title": "Nkwelle Takang",
+          "description": "Vice President contributing to governance."
+        },
+        {
+          "image": "images/image16.jpeg",
+          "title": "Iyvere Mofa Mosongo",
+          "description": "Legal Adviser ensuring compliance."
+        },
+        {
+          "image": "images/image17.jpeg",
+          "title": "Ojong Nkoghou Tabi",
+          "description": "Financial Consultant overseeing accountability."
+        },
+        {
+          "image": "images/image18.jpeg",
+          "title": "Solange Manka Ngwa",
+          "description": "MEAL Officer managing data and impact evaluation."
+        }
+      ]
+    }
+  ]
+}
+
