@@ -1,40 +1,40 @@
 import Image from "next/image";
+import { programSections } from "@/content/siteAssets";
 
 const programs = [
   {
     title: "Health & Nutrition",
     description:
       "Community health outreach, maternal care, SRHR education, and nutrition support for vulnerable households.",
-    image:
-      "https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&w=1200&q=80",
+    image: "/assets/images/image9.jpeg",
     alt: "Health outreach team supporting community members",
   },
   {
     title: "Livelihoods & Economic Empowerment",
     description:
       "Income-generating activities including poultry farming, vocational skills, and entrepreneurship for women and youth.",
-    image:
-      "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1200&q=80",
+    image: "/assets/images/image2.jpeg",
     alt: "Women participating in livelihood skills training",
   },
   {
     title: "Protection & Gender Equality",
     description:
       "Prevention of gender-based violence, child safeguarding, and safe spaces for girls and women.",
-    image:
-      "https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?auto=format&fit=crop&w=1200&q=80",
+    image: "/assets/images/image6.jpeg",
     alt: "Community protection program meeting",
   },
 ];
 
+const allActivities = programSections.flatMap((section) => section.items);
+
 export default function ProgramsPage() {
   return (
-    <section className="py-16">
+    <section className="bg-[#eef7f5] py-16">
       <div className="container mx-auto max-w-6xl px-6">
         <div className="relative mb-10 overflow-hidden rounded-3xl shadow-xl">
           <Image
-            src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=1600&q=80"
-            alt="NGO program team supporting community members"
+            src="/assets/images/image3.jpeg"
+            alt="HOVULF program beneficiaries during training"
             width={1200}
             height={600}
             className="h-64 w-full object-cover"
@@ -76,6 +76,23 @@ export default function ProgramsPage() {
               </div>
             </div>
           ))}
+        </div>
+
+        <div id="all-activities" className="mt-14 scroll-mt-20">
+          <h3 className="mb-5 text-2xl font-bold text-gray-900">All General Activities</h3>
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {allActivities.map((item) => (
+              <figure key={item.image} className="overflow-hidden rounded-2xl bg-white shadow-sm">
+                <div className="relative h-48">
+                  <Image src={item.image} alt={item.title} fill className="object-cover" />
+                </div>
+                <figcaption className="p-4">
+                  <p className="font-semibold text-gray-900">{item.title}</p>
+                  <p className="mt-1 text-sm text-gray-600">{item.description}</p>
+                </figcaption>
+              </figure>
+            ))}
+          </div>
         </div>
       </div>
     </section>

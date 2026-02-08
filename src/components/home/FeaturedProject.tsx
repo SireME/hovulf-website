@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function FeaturedProject() {
   return (
-    <section className="bg-white py-16">
+    <section className="bg-[#fff8ef] py-16">
       <div className="container mx-auto grid max-w-6xl items-center gap-12 px-6 lg:grid-cols-2">
         <div className="relative order-2 lg:order-1">
           <div className="absolute -top-6 left-8 rounded-2xl bg-white/80 px-4 py-2 text-xs font-semibold text-gray-700 shadow-lg backdrop-blur">
@@ -11,7 +11,7 @@ export default function FeaturedProject() {
           </div>
           <div className="relative overflow-hidden rounded-3xl shadow-xl">
             <Image
-              src="https://images.unsplash.com/photo-1516466723877-e4ec1d736c8a?auto=format&fit=crop&w=1200&q=80"
+              src="/assets/images/image11.jpeg"
               alt="Poultry farming project participants"
               width={840}
               height={520}

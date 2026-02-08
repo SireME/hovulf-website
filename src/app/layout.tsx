@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     "Community health Cameroon",
   ],
   authors: [{ name: "Hope for the Vulnerable Foundation" }],
-  metadataBase: new URL("https://hovulf.vercel.app"), // update after custom domain
+  metadataBase: new URL("https://hovulf.vercel.app"),
   openGraph: {
     title: "Hope for the Vulnerable Foundation",
     description:
