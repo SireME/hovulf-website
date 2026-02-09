@@ -90,7 +90,7 @@ export default function ImpactStats() {
       <div className="container mx-auto max-w-7xl px-6">
         <div className="grid items-center gap-16 lg:grid-cols-2">
           {/* Left Content */}
-          <div className="order-2 lg:order-1">
+          <div className="order-1 lg:order-1">
             <div className="mb-8">
               <Badge variant="primary">Proven field impact</Badge>
               <h2 className="text-4xl font-bold text-gray-900 leading-tight mb-4 mt-4">
@@ -142,23 +142,49 @@ export default function ImpactStats() {
           </div>
 
           {/* Right Image */}
-          <div className="order-1 lg:order-2 relative">
+          <div className="order-2 lg:order-2 relative">
             {/* Decorative blobs */}
             <div className="absolute -left-8 -top-8 h-32 w-32 rounded-full bg-blue-200/40 blur-3xl animate-pulse" />
             <div className="absolute -bottom-8 -right-8 h-40 w-40 rounded-full bg-purple-200/40 blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
             <div className="absolute top-1/2 left-0 h-24 w-24 rounded-full bg-emerald-200/40 blur-2xl" />
             
             {/* Main image container */}
-            <div className="relative overflow-hidden rounded-3xl shadow-2xl">
+            <div className="relative overflow-hidden rounded-3xl shadow-2xl group">
               <Image
                 src="/assets/images/image9.jpeg"
                 alt="Community health sensitization session"
                 width={820}
                 height={520}
-                className="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
+                className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
-              {/* Overlay gradient */}
-              <div className="absolute inset-0 bg-gradient-to-tr from-blue-900/20 via-transparent to-purple-900/10" />
+              
+              {/* Multiple Creative Overlay Layers */}
+              
+              {/* Base gradient overlay - Adds depth */}
+              <div className="absolute inset-0 bg-gradient-to-tr from-blue-900/30 via-purple-900/10 to-transparent" />
+              
+              {/* Vignette effect - Darkens edges */}
+              <div className="absolute inset-0 bg-gradient-radial from-transparent via-transparent to-gray-900/40" style={{
+                background: 'radial-gradient(ellipse at center, transparent 0%, transparent 50%, rgba(17, 24, 39, 0.3) 100%)'
+              }} />
+              
+              {/* Color enhancement overlay - Adds vibrant blue tint */}
+              <div className="absolute inset-0 bg-blue-600/10 mix-blend-overlay" />
+              
+              {/* Bottom gradient for text overlay area */}
+              <div className="absolute inset-0 bg-gradient-to-t from-blue-950/60 via-transparent to-transparent" />
+              
+              {/* Top left accent glow */}
+              <div className="absolute top-0 left-0 w-64 h-64 bg-gradient-to-br from-blue-500/20 to-transparent rounded-full blur-3xl" />
+              
+              {/* Bottom right accent glow */}
+              <div className="absolute bottom-0 right-0 w-64 h-64 bg-gradient-to-tl from-purple-500/20 to-transparent rounded-full blur-3xl" />
+              
+              {/* Subtle grid pattern overlay */}
+              <div className="absolute inset-0 opacity-5" style={{
+                backgroundImage: 'linear-gradient(0deg, transparent 24%, rgba(255, 255, 255, .1) 25%, rgba(255, 255, 255, .1) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, .1) 75%, rgba(255, 255, 255, .1) 76%, transparent 77%, transparent), linear-gradient(90deg, transparent 24%, rgba(255, 255, 255, .1) 25%, rgba(255, 255, 255, .1) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, .1) 75%, rgba(255, 255, 255, .1) 76%, transparent 77%, transparent)',
+                backgroundSize: '50px 50px'
+              }} />
             </div>
 
             {/* Stats badge overlay on image */}
