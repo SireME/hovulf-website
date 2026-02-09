@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function ImpactStats() {
   const stats = [
@@ -34,11 +35,13 @@ export default function ImpactStats() {
     children, 
     variant = 'primary',
     onClick,
+    href,
     icon
   }: { 
     children: React.ReactNode; 
     variant?: 'primary' | 'outline' | 'accent';
     onClick?: () => void;
+    href?: string;
     icon?: React.ReactNode;
   }) => {
     const variants = {
@@ -46,6 +49,18 @@ export default function ImpactStats() {
       accent: 'bg-orange-500 text-white hover:bg-orange-600 border-orange-500 shadow-sm hover:shadow-md',
       outline: 'bg-transparent text-blue-600 border-blue-600 hover:bg-blue-50',
     };
+
+    if (href) {
+      return (
+        <Link
+          href={href}
+          className={`inline-flex items-center justify-center gap-2 rounded-lg border font-semibold transition-all duration-200 px-5 py-2.5 text-base ${variants[variant]}`}
+        >
+          {children}
+          {icon && icon}
+        </Link>
+      );
+    }
 
     return (
       <button
@@ -130,6 +145,7 @@ export default function ImpactStats() {
             <div className="mt-8">
               <Button 
                 variant="accent"
+                href="/impact"
                 icon={
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
