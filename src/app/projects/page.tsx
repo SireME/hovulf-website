@@ -4,11 +4,11 @@ import { projects } from "@/content/projects";
 
 const projectImages = [
   {
-    src: "https://images.unsplash.com/photo-1516466723877-e4ec1d736c8a?auto=format&fit=crop&w=1200&q=80",
+    src: "/assets/images/image11.jpeg",
     alt: "Poultry farming project in action",
   },
   {
-    src: "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=1200&q=80",
+    src: "/assets/images/image12.jpeg",
     alt: "Community program support session",
   },
 ];
