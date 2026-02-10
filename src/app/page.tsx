@@ -6,6 +6,7 @@ import FeaturedProject from "@/components/home/FeaturedProject";
 import LeadershipPreview from "@/components/home/LeadershipPreview";
 import CTA from "@/components/home/CTA";
 import LocationMap from "@/components/home/LocationMap";
+import FloatingWhatsApp from "@/components/common/FloatingWhatsApp";
 
 export default function HomePage() {
   return (
@@ -18,6 +19,9 @@ export default function HomePage() {
       <LeadershipPreview />
       <CTA />
       <LocationMap />
+
+      {/* Floating WhatsApp Button */}
+      <FloatingWhatsApp />
     </>
   );
 }

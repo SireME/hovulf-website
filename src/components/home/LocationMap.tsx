@@ -100,7 +100,7 @@ export default function LocationMap() {
         </svg>
       ),
       title: "Phone",
-      detail: "+237 XXX XXX XXX",
+      detail: "+237 675 100 536",
       subDetail: "Mon-Fri, 9am-5pm",
       color: "emerald",
     },
