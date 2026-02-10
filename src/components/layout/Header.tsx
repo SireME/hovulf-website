@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 
 const links = [
   { href: "/about", label: "About" },
@@ -16,6 +17,7 @@ const links = [
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   // Inline Button Component
   const Button = ({ 
@@ -82,23 +84,34 @@ export default function Header() {
 
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center gap-1">
-              {links.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className="group relative px-4 py-2 text-sm font-semibold text-gray-700 transition-colors duration-200 hover:text-blue-600"
-                >
-                  {link.label}
-                  <span className="absolute bottom-0 left-0 h-0.5 w-0 bg-gradient-to-r from-blue-600 to-purple-600 transition-all duration-300 group-hover:w-full"></span>
-                </Link>
-              ))}
+              {links.map((link) => {
+                const isActive = pathname === link.href;
+                return (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className={`group relative px-4 py-2 text-sm font-semibold transition-colors duration-200 ${
+                      isActive ? "text-blue-600" : "text-gray-700 hover:text-blue-600"
+                    }`}
+                  >
+                    {link.label}
+                    <span 
+                      className={`absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-blue-600 to-purple-600 transition-all duration-300 ${
+                        isActive ? "w-full" : "w-0 group-hover:w-full"
+                      }`}
+                    ></span>
+                  </Link>
+                );
+              })}
             </nav>
 
             {/* Right Section - Desktop */}
             <div className="hidden md:flex items-center gap-4">
               <Link
                 href="/contact"
-                className="text-sm font-semibold text-gray-700 hover:text-blue-600 transition-colors duration-200"
+                className={`text-sm font-semibold transition-colors duration-200 ${
+                  pathname === "/contact" ? "text-blue-600" : "text-gray-700 hover:text-blue-600"
+                }`}
               >
                 Contact
               </Link>
@@ -187,19 +200,33 @@ export default function Header() {
           <div className="absolute top-20 left-0 right-0 bg-white border-b border-slate-200 shadow-2xl animate-in slide-in-from-top duration-300">
             <nav className="container mx-auto px-6 py-6">
               <div className="flex flex-col gap-1">
-                {links.map((link) => (
-                  <Link
-                    key={link.href}
-                    href={link.href}
-                    onClick={() => setMobileMenuOpen(false)}
-                    className="group flex items-center justify-between px-4 py-3 rounded-lg text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-all duration-200"
-                  >
-                    <span className="font-semibold">{link.label}</span>
-                    <svg className="w-5 h-5 text-gray-400 group-hover:text-blue-600 group-hover:translate-x-1 transition-all duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </Link>
-                ))}
+                {links.map((link) => {
+                  const isActive = pathname === link.href;
+                  return (
+                    <Link
+                      key={link.href}
+                      href={link.href}
+                      onClick={() => setMobileMenuOpen(false)}
+                      className={`group flex items-center justify-between px-4 py-3 rounded-lg transition-all duration-200 ${
+                        isActive 
+                          ? "bg-blue-50 text-blue-600" 
+                          : "text-gray-700 hover:bg-blue-50 hover:text-blue-600"
+                      }`}
+                    >
+                      <span className="font-semibold">{link.label}</span>
+                      <svg 
+                        className={`w-5 h-5 transition-all duration-200 ${
+                          isActive ? "text-blue-600 translate-x-1" : "text-gray-400 group-hover:text-blue-600 group-hover:translate-x-1"
+                        }`} 
+                        fill="none" 
+                        stroke="currentColor" 
+                        viewBox="0 0 24 24"
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </Link>
+                  );
+                })}
               </div>
               
               {/* Mobile CTA Section */}
