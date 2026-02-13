@@ -18,7 +18,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
       <div className="container mx-auto max-w-5xl px-6">
         <div className="relative mb-8 overflow-hidden rounded-3xl shadow-xl">
           <Image
-            src="https://images.unsplash.com/photo-1516466723877-e4ec1d736c8a?auto=format&fit=crop&w=1600&q=80"
+            src="/assets/images/image11.jpeg"
             alt="Poultry farming project in action"
             width={1200}
             height={600}
