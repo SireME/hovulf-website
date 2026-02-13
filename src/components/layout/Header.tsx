@@ -40,17 +40,22 @@ export default function Header() {
       gradient: 'bg-gradient-to-r from-orange-500 to-orange-600 text-white border-transparent shadow-lg shadow-orange-500/30 hover:shadow-xl hover:shadow-orange-500/40',
     };
 
-    const Component = href ? Link : 'button';
+    const buttonClassName = `inline-flex items-center justify-center gap-2 rounded-lg border font-bold transition-all duration-200 px-5 py-2.5 text-sm hover:-translate-y-0.5 ${variants[variant]} ${className}`;
+
+    if (href) {
+      return (
+        <Link href={href} className={buttonClassName}>
+          {children}
+          {icon && icon}
+        </Link>
+      );
+    }
 
     return (
-      <Component
-        {...(href ? { href } : {})}
-        {...(onClick ? { onClick } : {})}
-        className={`inline-flex items-center justify-center gap-2 rounded-lg border font-bold transition-all duration-200 px-5 py-2.5 text-sm hover:-translate-y-0.5 ${variants[variant]} ${className}`}
-      >
+      <button type="button" onClick={onClick} className={buttonClassName}>
         {children}
         {icon && icon}
-      </Component>
+      </button>
     );
   };
 

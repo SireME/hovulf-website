@@ -49,19 +49,24 @@ export default function LocationMap() {
       white: 'bg-white text-blue-600 border-white hover:bg-slate-50',
     };
 
-    const Component = href ? Link : 'button';
+    const buttonClassName = `inline-flex items-center justify-center gap-2 rounded-lg border font-semibold transition-all duration-200 px-6 py-3 text-base hover:-translate-y-0.5 ${variants[variant]}`;
+
+    if (href) {
+      return (
+        <Link href={href} target={target} rel={rel} className={buttonClassName}>
+          {icon && iconPosition === 'left' && icon}
+          {children}
+          {icon && iconPosition === 'right' && icon}
+        </Link>
+      );
+    }
 
     return (
-      <Component
-        {...(href ? { href } : {})}
-        {...(target ? { target } : {})}
-        {...(rel ? { rel } : {})}
-        className={`inline-flex items-center justify-center gap-2 rounded-lg border font-semibold transition-all duration-200 px-6 py-3 text-base hover:-translate-y-0.5 ${variants[variant]}`}
-      >
+      <button type="button" className={buttonClassName}>
         {icon && iconPosition === 'left' && icon}
         {children}
         {icon && iconPosition === 'right' && icon}
-      </Component>
+      </button>
     );
   };
 

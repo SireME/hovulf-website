@@ -82,16 +82,22 @@ export default function ProgramsPreview() {
       outline: 'bg-transparent text-blue-600 border-blue-600 hover:bg-blue-50',
     };
 
-    const Component = href ? Link : 'button';
+    const buttonClassName = `inline-flex items-center justify-center gap-2 rounded-lg border font-semibold transition-all duration-200 px-6 py-3 text-base ${variants[variant]}`;
+
+    if (href) {
+      return (
+        <Link href={href} className={buttonClassName}>
+          {children}
+          {icon && icon}
+        </Link>
+      );
+    }
 
     return (
-      <Component
-        {...(href ? { href } : {})}
-        className={`inline-flex items-center justify-center gap-2 rounded-lg border font-semibold transition-all duration-200 px-6 py-3 text-base ${variants[variant]}`}
-      >
+      <button type="button" className={buttonClassName}>
         {children}
         {icon && icon}
-      </Component>
+      </button>
     );
   };
 

@@ -43,16 +43,22 @@ export default function CTA() {
       outline: 'bg-transparent text-white border-2 border-white hover:bg-white hover:text-blue-700',
     };
 
-    const Component = href ? Link : 'button';
+    const buttonClassName = `group inline-flex items-center justify-center gap-3 rounded-xl border-0 font-bold transition-all duration-300 px-8 py-4 text-lg hover:-translate-y-1 hover:scale-105 ${variants[variant]}`;
+
+    if (href) {
+      return (
+        <Link href={href} className={buttonClassName}>
+          {children}
+          {icon && icon}
+        </Link>
+      );
+    }
 
     return (
-      <Component
-        {...(href ? { href } : {})}
-        className={`group inline-flex items-center justify-center gap-3 rounded-xl border-0 font-bold transition-all duration-300 px-8 py-4 text-lg hover:-translate-y-1 hover:scale-105 ${variants[variant]}`}
-      >
+      <button type="button" className={buttonClassName}>
         {children}
         {icon && icon}
-      </Component>
+      </button>
     );
   };
 

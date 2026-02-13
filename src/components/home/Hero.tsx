@@ -55,17 +55,24 @@ export default function Hero() {
       lg: 'px-8 py-4 text-lg',
     };
 
-    const Component = href ? Link : 'button';
+    const buttonClassName = `inline-flex items-center justify-center gap-2 rounded-lg border font-bold transition-all duration-300 hover:-translate-y-1 ${variants[variant]} ${sizes[size]}`;
+
+    if (href) {
+      return (
+        <Link href={href} className={buttonClassName}>
+          {icon && iconPosition === 'left' && icon}
+          {children}
+          {icon && iconPosition === 'right' && icon}
+        </Link>
+      );
+    }
 
     return (
-      <Component
-        {...(href ? { href } : {})}
-        className={`inline-flex items-center justify-center gap-2 rounded-lg border font-bold transition-all duration-300 hover:-translate-y-1 ${variants[variant]} ${sizes[size]}`}
-      >
+      <button type="button" className={buttonClassName}>
         {icon && iconPosition === 'left' && icon}
         {children}
         {icon && iconPosition === 'right' && icon}
-      </Component>
+      </button>
     );
   };
 
