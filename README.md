@@ -13,6 +13,7 @@ pnpm dev
 # or
 bun dev
 ```
+review deployment commands
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
